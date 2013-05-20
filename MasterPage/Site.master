@@ -1,0 +1,87 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SitePage_MainSitePage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head1" runat="server">
+    <title>文献资料管理系统首页</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
+    <link href="../css.css" rel="stylesheet" type="text/css"/>
+</head>
+<body bgcolor="#DDDDDD" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<div align="center">
+<form id="Form1" runat="server">
+  
+  <table id="__01" width="914" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+      <td rowspan="5" bgcolor="#DDDDDD">&nbsp;</td>
+	    <td height="118" valign="bottom" background="../images/index_//02.gif" style="width: 776px"><h1>文献资料管理系统</h1><table width="280" height="30" border="0" align="right" cellpadding="0" cellspacing="0">
+          <tr>
+            <td class="daohang1">你好：<asp:Label ID="labAdmin" runat="server"></asp:Label>！</td>
+          </tr>
+        </table></td>
+	    <td rowspan="5" bgcolor="#DDDDDD" style="width: 68px">&nbsp;</td>
+    </tr>
+    <tr>
+      <td height="26" valign="top" style="width: 776px; background-color: #ffffff;"><table width="777" height="26" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="182" align="center" bgcolor="#65D7D4" class="css"><span class="daohang1"><asp:Label ID="labDate" runat="server" Font-Size="9pt" ForeColor="Black"></asp:Label>&nbsp;
+            <asp:Label ID="labXQ" runat="server" Font-Size="9pt" ForeColor="Black"></asp:Label></span></td>
+          <td width="588" align="center" bgcolor="#42BAB6" class="daohang1">
+<asp:Menu ID="menuNav" runat="server" BackColor="#42BAB6" DynamicHorizontalOffset="2"
+                Font-Names="宋体" Font-Size="9pt" ForeColor="White" Orientation="Horizontal"
+                StaticSubMenuIndent="10px" OnMenuItemClick="menuNav_MenuItemClick" DynamicPopOutImageTextFormatString="">
+                <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                <DynamicHoverStyle BackColor="#666666" ForeColor="White" />
+                <DynamicMenuStyle BackColor="#42BAB6" />
+                <StaticSelectedStyle BackColor="#1C5E55" />
+                <DynamicSelectedStyle BackColor="#1C5E55" />
+                <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                <Items>
+                    <asp:MenuItem Text="首页" Value="首页" NavigateUrl="~/Default.aspx"></asp:MenuItem>
+                   <asp:MenuItem Text="系统设置" Value="系统设置">
+                        <asp:MenuItem Text="网站信息" Value="网站信息" NavigateUrl="~/Common/SiteInfo.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="管理员密码设置" Value="管理员密码设置" NavigateUrl="~/Common/ChanagePwd.aspx"></asp:MenuItem>
+                        
+                    </asp:MenuItem>  
+                    <asp:MenuItem Text="用户管理" Value="用户管理">
+                        
+                        <asp:MenuItem Text="用户信息管理" Value="用户信息管理" NavigateUrl="~/UserManage/UserManage.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="添加用户信息" Value="添加用户信息" NavigateUrl="~/UserManage/AddUser.aspx"></asp:MenuItem>
+                    </asp:MenuItem>
+                   <asp:MenuItem Text="文献资料管理" Value="文献资料管理">
+                        <asp:MenuItem Text="文献资料信息管理" Value="文献资料信息管理" NavigateUrl="~/DocumentatManage/DocumentatManage.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="修改文献资料信息" Value="修改文献资料信息" NavigateUrl="~/DocumentatManage/UpdateDocumentat.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="添加文献资料信息" Value="添加文献资料信息" NavigateUrl="~/DocumentatManage/AddDocumentat.aspx"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="文献资料类型管理" Value="文献资料类型管理">
+                        <asp:MenuItem Text="文献资料类型管理" Value="文献资料类型管理" NavigateUrl="~/DocumentatManage/TypeManage.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="添加文献资料类型" Value="添加文献资料类型" NavigateUrl="~/DocumentatManage/AddType.aspx"></asp:MenuItem>
+                    </asp:MenuItem>
+                   
+                    
+                   
+                    <asp:MenuItem Text="用户登录" Value="用户登录" NavigateUrl="~/Login.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="退出系统" Value="退出系统"></asp:MenuItem>
+                </Items>
+                <StaticHoverStyle BackColor="#666666" ForeColor="White" />
+            </asp:Menu>          
+            </td>
+        </tr>
+      </table></td>
+    </tr>
+            <tr>
+                <td style="width: 776px; height: 231px; background-color: #ffffff;">
+        <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">
+        </asp:contentplaceholder>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 776px; background-image: url(../images/index_//14.gif); height: 66px;">
+                </td>
+            </tr>
+        </table>
+        </form>
+    </div>
+</body>
+</html>
